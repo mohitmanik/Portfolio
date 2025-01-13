@@ -35,7 +35,7 @@ const Education = () => {
       institution: "VIT Bhopal University",
       year: "2026",
       degree: "B.Tech in Computer Science",
-      cgpa: "8.89/10",
+      cgpa: "8.98/10",
     },
   ];
 
