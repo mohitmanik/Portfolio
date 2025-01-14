@@ -6,7 +6,7 @@ function Contact() {
     const formData = new FormData(event.target);
 
     // Add access key (replace with your actual access key)
-    formData.append("access_key",  import.meta.env.VITE_ACCESS_KEY);
+    formData.append("access_key", import.meta.env.VITE_ACCESS_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

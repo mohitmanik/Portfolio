@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import img from "../assets/mohit.jpg";
+import img from "../assets/resumephoto.jpg";
 
 const Home = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
