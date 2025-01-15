@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
 import img from "../assets/mohit manik.png";
+import confetti from "canvas-confetti";
 
 const Home = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
   const handleHover = () => {
-    const randomX = Math.random() * 400 - 200; // Range: -200 to +200
-    const randomY = Math.random() * 400 - 200; // Range: -200 to +200
-    setPosition({ x: randomX, y: randomY });
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }, // Adjust where the confetti originates
+    });
   };
 
   return (
@@ -51,20 +52,13 @@ const Home = () => {
           </svg>
         </div>
 
-        {/* Escaping Image Section */}
-        <div
-          className="relative"
-          style={{
-            transform: `translate(${position.x}px, ${position.y}px)`,
-            transition: "transform 0.1s ease-out", // Fast escape
-          }}
-          onMouseEnter={handleHover} // Escape on hover
-          onClick={handleHover} // Escape on click
-        >
+        {/* Firework Image Section */}
+        <div className="relative">
           <img
             src={img}
             alt="Mohit Manik"
-            className="rounded-full w-40 h-40 mb-6 border-4 border-violet-500 shadow-lg cursor-pointer"
+            className="rounded-full w-40 h-40 mb-6 border-4 border-violet-500 shadow-xl cursor-pointer hover:shadow-2xl"
+            onMouseEnter={handleHover} // Trigger confetti on hover
           />
         </div>
 
