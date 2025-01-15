@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import img from "../assets/resumephoto.jpg";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
+import img from "../assets/mohit manik.png";
 
 const Home = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleHover = () => {
-    // Generate wider random positions within a larger range
     const randomX = Math.random() * 400 - 200; // Range: -200 to +200
     const randomY = Math.random() * 400 - 200; // Range: -200 to +200
-
     setPosition({ x: randomX, y: randomY });
   };
 
@@ -70,13 +69,49 @@ const Home = () => {
         </div>
 
         {/* Intro Section */}
-        <div className="absolute bottom-10 text-center">
+        <div className="absolute bottom-28 text-center">
           <h1 className="text-4xl font-bold mb-4">Hello, I'm Mohit Manik</h1>
           <p className="text-lg max-w-lg mx-auto">
             I’m a passionate developer specializing in building innovative
             projects, solving challenging problems, and continually learning new
             technologies.
           </p>
+        </div>
+
+        {/* Social Links Section */}
+        <div className="absolute bottom-8 flex space-x-6">
+          <a
+            href="https://github.com/mohitmanik"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-violet-400 transition-transform transform hover:scale-125"
+          >
+            <FaGithub size={30} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohit-manik-778b38251/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-violet-400 transition-transform transform hover:scale-125"
+          >
+            <FaLinkedin size={30} />
+          </a>
+          <a
+            href="https://www.geeksforgeeks.org/user/mohitmaynqv/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-violet-400 transition-transform transform hover:scale-125"
+          >
+            <SiGeeksforgeeks size={30} />
+          </a>
+          <a
+            href="https://leetcode.com/u/manikmohit/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-violet-400 transition-transform transform hover:scale-125"
+          >
+            <SiLeetcode size={30} />
+          </a>
         </div>
       </div>
     </div>
