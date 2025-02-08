@@ -2,17 +2,8 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
 import img from "../assets/mohit manik.png";
-import confetti from "canvas-confetti";
 
 const Home = () => {
-  const handleHover = () => {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 }, // Adjust where the confetti originates
-    });
-  };
-
   return (
     <div className="h-full overflow-y-hidden">
       <div className="relative bg-gradient-to-r from-black to-violet-800 text-white h-screen flex items-center justify-center overflow-hidden">
@@ -52,13 +43,12 @@ const Home = () => {
           </svg>
         </div>
 
-        {/* Firework Image Section */}
+        {/* Image Section */}
         <div className="relative">
           <img
             src={img}
             alt="Mohit Manik"
             className="rounded-full w-40 h-40 mb-6 border-4 border-violet-500 shadow-xl cursor-pointer hover:shadow-2xl"
-            onMouseEnter={handleHover} // Trigger confetti on hover
           />
         </div>
 
